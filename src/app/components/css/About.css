@@ -1,0 +1,29 @@
+.about-header{
+    font-weight:600;
+    text-align: center;
+}
+.paragph-about{
+    text-align: center;
+    font-weight: 300;
+}
+
+.about-image{
+position: relative;
+left: 30%;
+}
+
+@media screen and (max-width:1199px) {
+    .paragph-about{
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .paragph-about{
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+    .about-header{
+        font-size: 18px;
+    }
+}
