@@ -1,6 +1,6 @@
 .nav-bg {
     background-color: #4651C2 !important;
-    padding: 19px;
+    padding: 14px;
 
 }
 
@@ -9,6 +9,7 @@
     padding-right: 62px !important;
     font-size: 13px;
     position: relative;
+    font-weight: bolder;
 
 }
 
