@@ -19,8 +19,8 @@ export const TopBar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto">
-            {Header.map((item) => (
-              <Nav.Link href={item.to} className={item.className}>{item.title}</Nav.Link>
+            {Header.map((item, index) => (
+              <Nav.Link href={item.to} className={item.className} key={index}>{item.title}</Nav.Link>
             ))}
           </Nav>
           <Nav className='auth-head'>

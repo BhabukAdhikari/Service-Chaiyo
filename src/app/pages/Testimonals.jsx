@@ -1,6 +1,5 @@
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import bikash from '../images/bikash.jpg';
-import dealings from '../images/dealings.jpeg';
 
 import '../components/css/Testimonial.css';
 
@@ -24,7 +23,6 @@ export const Testimonial = () => {
                                         <p>"Working with this website has been an absolute pleasure. Their team's dedication to excellence and commitment to customer satisfaction are truly remarkable. From the initial consultation to the final delivery, they exceeded my expectations at every turn."</p>
                                         <div className="img-circle">
                                             <img src={bikash} alt="Bikash" />
-                                            <p>Developer</p>
                                         </div>
                                     </div>
                                 </Col>
@@ -35,7 +33,29 @@ export const Testimonial = () => {
                                         <h1>Excellent!</h1>
                                         <p>"I'm incredibly impressed with the level of professionalism and expertise they bring to the table. If you're looking for a reliable partner to elevate your business, look no further than this website. They've earned my trust and admiration!"</p>
                                         <div className="img-circle">
-                                            <img src={dealings} alt="Dealings" />
+                                            <img src={bikash} alt="Bhabuk" />
+                                        </div>
+                                    </div>
+                                </Col>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <Col md={12}>
+                                    <div className="box mt-5">
+                                        <h1>Excellent!</h1>
+                                        <p>"I'm incredibly impressed with the level of professionalism and expertise they bring to the table. If you're looking for a reliable partner to elevate your business, look no further than this website. They've earned my trust and admiration!"</p>
+                                        <div className="img-circle">
+                                            <img src={bikash} alt="Bhabuk" />
+                                        </div>
+                                    </div>
+                                </Col>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <Col md={12}>
+                                    <div className="box mt-5">
+                                        <h1>Excellent!</h1>
+                                        <p>"I'm incredibly impressed with the level of professionalism and expertise they bring to the table. If you're looking for a reliable partner to elevate your business, look no further than this website. They've earned my trust and admiration!"</p>
+                                        <div className="img-circle">
+                                            <img src={bikash} alt="Bhabuk" />
                                         </div>
                                     </div>
                                 </Col>
