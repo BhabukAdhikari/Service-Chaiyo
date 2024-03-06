@@ -15,12 +15,12 @@ export const TopBar = () => {
     <Navbar collapseOnSelect expand="lg" className="nav-bg">
       <Container fluid>
         <Navbar.Brand href="/"> <TfiHeadphoneAlt />
-          &nbsp;   ServiceProvider</Navbar.Brand>
+          &nbsp; ServiceProvider</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto">
-            {Header.map((item) => (
-              <Nav.Link key={item.id} href={item.to} className={item.className}>{item.title}</Nav.Link>
+            {Header.map((item, index) => (
+              <Nav.Link href={item.to} className={item.className} key={index}>{item.title}</Nav.Link>
             ))}
           </Nav>
           <Nav className='auth-head'>
