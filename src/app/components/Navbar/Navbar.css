@@ -1,7 +1,6 @@
 .nav-bg {
     background-color: #4651C2 !important;
-    padding: 14px;
-
+    padding: 19px;
 }
 
 .nav-link {
@@ -36,7 +35,7 @@
 }
 
 .navbar-brand {
-    color: white;
+    color: white !important;
     font-weight: 700;
     font-size: 22px;
 }

@@ -3,7 +3,6 @@ export const Header = [
         id: 1,
         title: 'Home',
         to: '/',
-        className:'home'
     },
     {
         id: 2,

@@ -15,7 +15,7 @@ export const TopBar = () => {
     <Navbar collapseOnSelect expand="lg" className="nav-bg">
       <Container fluid>
         <Navbar.Brand href="/"> <TfiHeadphoneAlt />
-          &nbsp;   ServiceProvider</Navbar.Brand>
+          &nbsp; ServiceProvider</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto">
