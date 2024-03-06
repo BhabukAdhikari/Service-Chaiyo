@@ -1,7 +1,16 @@
-import React from 'react'
+import React from "react";
 
-export const Header = () => {
+import "./Header.css";
+import { Hero } from "../Hero";
+import { TopBar } from "../Navbar";
+
+export const Header = ( ) => {
   return (
-    <div>Header</div>
-  )
-}
+      <>
+          <TopBar title=".Travel" />
+          <section className="header">
+           <Hero />
+          </section>
+      </>
+  );
+};

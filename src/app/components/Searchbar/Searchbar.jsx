@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import { Form, Button, Col, Row, InputGroup } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faSearch,
-  faCalendarAlt,
-  faUsers,
-} from "@fortawesome/free-solid-svg-icons";
+import { Form, Button, Col, Row } from "react-bootstrap";
 
 import "./Searchbar.css";
 
@@ -16,74 +10,56 @@ export const Searchbar = () => {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
-    // const values = {
-    //   keyword,
-    //   category,
-    //   address,
-    // };
-    // console.log(values);
+    const values = {
+      keyword,
+      category,
+      address,
+    };
+    console.log(values);
   };
 
   return (
-    <Form onSubmit={onFormSubmit} className="d-md-flex">
+    <Form
+      onSubmit={onFormSubmit}
+      className="d-md-flex bg-light mx-auto text-center"
+    >
       <Row className="headerSearch">
-        <Col md={4} className="headerSearchItem">
-          <InputGroup>
-            <InputGroup.Text>
-              <FontAwesomeIcon icon={faSearch} className="headerIcon" />
-            </InputGroup.Text>
+        <Col md={3} className="headerSearchItem">
             <Form.Control
+            className="form-inputs"
               type="text"
               placeholder="Keyword"
               name="keyword"
               value={keyword}
               onChange={(e) => setKeyword(e.target.value)}
             />
-          </InputGroup>
         </Col>
-        <Col md={4} className="headerSearchItem">
-          <InputGroup>
-            <InputGroup.Text>
-              <FontAwesomeIcon icon={faCalendarAlt} className="headerIcon" />
-            </InputGroup.Text>
+        <Col md={3} className="headerSearchItem">
             <Form.Control
+             className="form-inputs"
               type="text"
               placeholder="Category"
               name="category"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
             />
-          </InputGroup>
         </Col>
-        <Col md={4} className="headerSearchItem">
-          <InputGroup>
-            <InputGroup.Text>
-              <FontAwesomeIcon
-                icon={faUsers}
-                className="headerIcon mr-3 text-primary"
-              />
-            </InputGroup.Text>
+        <Col md={3} className="headerSearchItem">
             <Form.Control
+             className="form-inputs"
               type="text"
               placeholder="Address"
               name="address"
               value={address}
               onChange={(e) => setAddress(e.target.value)}
             />
-          </InputGroup>
         </Col>
-        <Button type="submit" className="headerBtn">
-          Search
-        </Button>
+        <Col md={3} className="headerSearchItem ">
+          <Button type="submit" className="headerBtn btn-primary ">
+            Search
+          </Button>
+        </Col>
       </Row>
     </Form>
   );
 };
-
-// import React from 'react'
-
-// export const Searchbar = () => {
-//   return (
-//     <div>Searchbar</div>
-//   )
-// }

@@ -20,7 +20,7 @@ export const TopBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto">
             {Header.map((item) => (
-              <Nav.Link href={item.to} className={item.className}>{item.title}</Nav.Link>
+              <Nav.Link key={item.id} href={item.to} className={item.className}>{item.title}</Nav.Link>
             ))}
           </Nav>
           <Nav className='auth-head'>
