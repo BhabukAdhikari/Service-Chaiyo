@@ -1,3 +1,11 @@
 :root{
     background-color: black;
 }
+
+button{
+    color: aliceblue;
+    background-color: rgb(28, 28, 227);
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+}
