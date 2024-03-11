@@ -1,18 +1,12 @@
-import React from "react";
-//components
-import { Footer, Header, TopBar } from "../components";
-import { About } from "../pages/About";
-import { Testimonial } from "../pages/Testimonals";
+import { React } from "react";
+import { Footer, TopBar } from "../components";
 
 export const MainLayout = ({ children }) => {
   return (
-    <div>
+    <>
       <TopBar />
       {children}
-      {/* <Header /> */}
-      <About />
-      <Testimonial />
-      {/* <Footer /> */}
-    </div>
+      <Footer />
+    </>
   );
-};
+}

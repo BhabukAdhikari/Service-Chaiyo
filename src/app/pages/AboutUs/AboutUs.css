@@ -1,0 +1,31 @@
+.aboutImage {
+    height: 50vh;
+    width: 100% !important;
+    background-repeat: no-repeat;
+    background-image: url(../../assets/images/about-img.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 20%;
+}
+.aboutImage h1{
+    color: #fff;
+    font-weight: 800;
+}
+.about-content{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.aboutUs-paragraph{
+    font-size: 40px;
+    font-weight: 700;
+}
+.aboutImg{
+    width: 70%;
+}
+.ladyEng{
+    width: 30%;
+    height: 100%;
+}

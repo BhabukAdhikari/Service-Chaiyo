@@ -1,0 +1,54 @@
+.jobs-div {
+    background-color: #EFF3F6;
+}
+
+.job {
+    color: #FFB600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.jobs-div h2 {
+    color: #022279;
+}
+
+.badge {
+    background-color: #ECFAFE;
+    height: 30px;
+    color: #4FCCF3;
+    font-size: 14px;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    background-color: #4FCCF3;
+    border-radius: 50%;
+    margin-top: 7px;
+}
+
+.jobs-title {
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.jobs-info {
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.location-jobs {
+    color: #C7C7C7;
+    font-weight: 500;
+}
+
+.jobs-interval p {
+    color: #C7C7C7;
+    font-weight: 500;
+}
+
+.text-danger {
+    font-size: 18px;
+}

@@ -1,7 +1,15 @@
-import React from 'react'
+import React from "react";
 
-export const Header = () => {
+import "./Header.css";
+import { Hero } from "../Hero";
+
+export const Header = ( ) => {
   return (
-    <div>Header</div>
-  )
-}
+      <>
+           
+          <section className="header">
+           <Hero />
+          </section> 
+      </>
+  );
+};
