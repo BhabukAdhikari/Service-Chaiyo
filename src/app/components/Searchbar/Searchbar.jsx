@@ -21,38 +21,38 @@ export const Searchbar = () => {
   return (
     <Form
       onSubmit={onFormSubmit}
-      className="d-md-flex bg-light mx-auto text-center"
+      className="d-md-flex bg-light mx-auto text-center sidebar-form "
     >
       <Row className="headerSearch">
         <Col md={3} className="headerSearchItem">
-            <Form.Control
+          <Form.Control
             className="form-inputs"
-              type="text"
-              placeholder="Keyword"
-              name="keyword"
-              value={keyword}
-              onChange={(e) => setKeyword(e.target.value)}
-            />
+            type="text"
+            placeholder="Keyword"
+            name="keyword"
+            value={keyword}
+            onChange={(e) => setKeyword(e.target.value)}
+          />
         </Col>
         <Col md={3} className="headerSearchItem">
-            <Form.Control
-             className="form-inputs"
-              type="text"
-              placeholder="Category"
-              name="category"
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-            />
+          <Form.Control
+            className="form-inputs"
+            type="text"
+            placeholder="Category"
+            name="category"
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          />
         </Col>
         <Col md={3} className="headerSearchItem">
-            <Form.Control
-             className="form-inputs"
-              type="text"
-              placeholder="Address"
-              name="address"
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-            />
+          <Form.Control
+            className="form-inputs"
+            type="text"
+            placeholder="Address"
+            name="address"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+          />
         </Col>
         <Col md={3} className="headerSearchItem ">
           <Button type="submit" className="headerBtn">

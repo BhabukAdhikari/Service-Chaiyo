@@ -21,18 +21,18 @@ export const Footer = () => {
             </div>
             <p className='paragraph-footer'>Join us and find perfect solution for your daily problems</p>
           </Col>
-          <Col lg={3} sm={4} className='pt-4'>
+          <Col lg={3} sm={5} className='pt-4'>
             <h4 className='footerContactTitle'>Contact Us</h4>
             <IoMdMail />
-            <a href="" className='px-1'>servicesupport@gmail.com</a>
+            <a href="" className='px-1'>service@gmail.com</a>
             <div>
               <MdCall />
               <a href="" className='px-1'>01-234567</a>
             </div>
           </Col>
-          <Col lg={3} sm={4} className='pt-4'>
+          <Col lg={3} sm={3} className='pt-4'>
             <h4 className='footerContactTitle'>Follow Us</h4>
-            <a href="" className='px-2'> <FaFacebook /></a>
+            <a href=""> <FaFacebook /></a>
             <a href="" className='px-2'>  <FaTwitter /></a>
 
           </Col>

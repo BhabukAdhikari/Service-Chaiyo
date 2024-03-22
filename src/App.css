@@ -1,12 +1,13 @@
 :root {
     /* --primary: #3b71fe !important; */
     --primary: #acffab !important;
-    --primary-dark: #1049d9 !important;
+    --primary-dark: #46009f !important;
     --bg-primary: #3b71fe !important
 }
 
-.btn-primary {
-    background-color: var(--primary-dark);
+.btn.btn-primary {
+    background-color: var(--primary-dark) !important;
+    border: none !important;
 
 }
 .bg-primary {

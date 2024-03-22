@@ -4,9 +4,9 @@ import {
   , Nav
   , Navbar
 } from 'react-bootstrap';
-import { Header } from '../../mock/data';
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 
+import { Header } from '../../mock/data';
 import './Navbar.css'
 
 export const TopBar = () => {
@@ -26,7 +26,7 @@ export const TopBar = () => {
           <Nav className='auth-head'>
             <Nav.Link href="/login">Login</Nav.Link>
             <div className="vertical"></div>
-            <Nav.Link href="/sign-up">
+            <Nav.Link href="/register">
               SignUp
             </Nav.Link>
           </Nav>

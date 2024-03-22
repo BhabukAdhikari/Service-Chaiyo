@@ -1,13 +1,14 @@
-// PopularCategories.js
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
-import { cardsData } from "../../mock/popularcategories";
+import { cardsData } from "../../mock/popularCategories";
+
 import "../PopularCategories/PopularCategories.css";
 
 export const PopularCategories = () => {
   return (
     <Container>
+      <div className="popular-service">
       <h1>Popular Services</h1>
       <Row className="justify-content-center mt-5">
         {cardsData.map((category) => (
@@ -36,6 +37,7 @@ export const PopularCategories = () => {
           </Col>
         ))}
       </Row>
+      </div>
     </Container>
   );
 };

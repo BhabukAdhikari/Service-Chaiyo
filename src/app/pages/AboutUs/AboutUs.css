@@ -29,3 +29,31 @@
     width: 30%;
     height: 100%;
 }
+.daily-basis-problem{
+    background-color: grey;
+    height: 30%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+} 
+
+.img-rajiv{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 47vh;
+    width: 35vh;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.daily-basis-content{
+ padding-top: 50px;   
+}
+.daily-basis-content h2{
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 35px;
+}
+.daily-basis-content p{
+    font-weight: 500;
+    line-height: 35px;
+    color: white;
+}

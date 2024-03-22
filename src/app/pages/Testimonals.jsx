@@ -2,6 +2,7 @@ import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import bikash from '../images/bikash.jpg';
 
 import { MdKeyboardArrowLeft,MdKeyboardArrowRight } from "react-icons/md";
+
 import '../components/css/Testimonial.css';
 
 export const Testimonial = () => {
@@ -10,7 +11,7 @@ export const Testimonial = () => {
             <Container>
                 <Row>
                     <Col md={6}>
-                        <div className="what-says mt-5">
+                        <div className="what-says">
                             <h3 className='sub-heading'> What people are saying ?</h3>
                             <p className='testimonal-p pt-2'>Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Nam tincidunt mauris ac blan dit fermtum. Proin porta tincidunt est.</p>
                         </div>
@@ -22,7 +23,7 @@ export const Testimonial = () => {
                         >
                             <Carousel.Item>
                                 <Col md={12}>
-                                    <div className="box mt-5">
+                                    <div className="box">
                                         <h1>Great Job!</h1>
                                         <p>Working with this website has been an absolute pleasure. Their team's dedication to excellence and commitment to customer satisfaction are truly remarkable. From the initial consultation to the final delivery, they exceeded my expectations at every turn.</p>
                                         <div className="img-circle">

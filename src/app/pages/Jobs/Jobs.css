@@ -1,3 +1,13 @@
+.jobs-image {
+    height: 50vh;
+    width: 100% !important;
+    background-repeat: no-repeat;
+    background-image: url(../../assets/images/jobsImage.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 20%;
+}
+
 .jobs-div {
     background-color: #EFF3F6;
 }
@@ -51,4 +61,16 @@
 
 .text-danger {
     font-size: 18px;
+}
+
+.section-title {
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    top: 14vh;
 }
