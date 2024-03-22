@@ -1,14 +1,12 @@
-import React from "react";
-//components
-import { Navbar } from "../components";
-import { Header } from "../components";
+import { React } from "react";
+import { Footer, TopBar } from "../components";
 
 export const MainLayout = ({ children }) => {
   return (
-    <div>
-      <Navbar />
-      <Header />
+    <>
+      <TopBar />
       {children}
-    </div>
+      <Footer />
+    </>
   );
-};
+}

@@ -1,0 +1,62 @@
+.nav-bg {
+    background-color: #4651C2 !important;
+    padding: 19px;
+}
+
+.nav-link {
+    color: white;
+    padding-right: 62px !important;
+    font-size: 13px;
+    position: relative;
+
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 55%;
+    height: 2px;
+    background: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+
+.nav-link,
+.navbar-brand:hover {
+    color: white !important;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.auth-head {
+    font-size: 15px !important;
+    font-weight: 700;
+}
+
+.vertical {
+    border-left: 1px solid white;
+    height: 20px;
+    position: absolute;
+    right: 175px;
+    bottom: 35%;
+}
+.navbar-toggler-icon{
+    color: white !important;
+}
+
+@media screen and (max-width:991px) {
+    .vertical {
+        display: none !important;
+    }
+}
