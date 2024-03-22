@@ -8,7 +8,7 @@ import '../components/css/About.css';
 export const About = () => {
     return (
         <>
-            <Container>
+            <Container className='pt-5 pb-5'>
                 <Row>
                     <Col md={4}>
                         <img src={dealings} alt="dealing-img" className='about-image' />

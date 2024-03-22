@@ -1,0 +1,82 @@
+.parent-login {
+    background-color: #EEEEEE;
+    height: 100vh;
+}
+
+.login-box {
+    background-color: white;
+    height: 600px;
+    width: 70%;
+    position: relative;
+    top: 14%;
+    left: 15%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+}
+
+.img-login {
+    background-image: url('../assets/images/login.jpeg');
+    height: 600px;
+    background-repeat: no-repeat;
+    width: 45%;
+}
+
+.img-login h1 {
+    color: white;
+    text-align: center;
+    padding-top: 26vh;
+    font-size: 40px;
+    font-weight: bolder
+}
+
+@media screen and (max-width: 620px) {
+    .img-login h1 {
+        font-size: 1rem;
+        padding-top: 30vh;
+    }
+}
+
+.login-form {
+    padding-left: 10%;
+}
+
+.subtitle-login {
+    color: #CDCDCD;
+    font-weight: 500;
+}
+
+.login-form h1 {
+    font-size: 40px;
+    font-weight: bolder;
+    padding-top: 15%;
+    padding-bottom: 3%;
+}
+
+.loginForm {
+    margin-top: 20px;
+}
+
+.forgot-password input {
+    height: 15px;
+    width: 15px;
+    margin-left: 3px;
+}
+
+.forgot-password p {
+    margin-top: -5px;
+    margin-left: 5px;
+    font-weight: 500;
+}
+
+.forgot {
+    color: red;
+    font-weight: 800;
+    font-size: 16px;
+    text-decoration: underline;
+    margin-top: 5px;
+}
+
+.text-danger {
+    font-size: 15px !important;
+    /* margin-top: -17px; */
+}

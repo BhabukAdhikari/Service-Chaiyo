@@ -1,0 +1,18 @@
+.footer{
+    background-color: aliceblue;
+    padding: 40px;
+}
+.footerLogo{
+    height: 30px;
+}
+.footerTitle{
+    font-weight: 800;
+    font-size: 24px;
+}
+.paragraph-footer{
+    margin-left: 38px;
+}
+.footerContactTitle{
+    font-weight: 700;
+    font-size: 22px;
+}
