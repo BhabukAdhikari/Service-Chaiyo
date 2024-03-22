@@ -7,7 +7,7 @@ import { TopBar } from "../Navbar";
 export const Header = ( ) => {
   return (
       <>
-          <TopBar title=".Travel" />
+          <TopBar title="" />
           <section className="header">
            <Hero />
           </section>

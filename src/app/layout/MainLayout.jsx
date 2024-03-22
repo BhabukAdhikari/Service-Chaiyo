@@ -8,7 +8,6 @@ export const MainLayout = ({ children }) => {
   return (
     <div>
       <Header />
-      <TopBar />
       {children}
       {/* <Header /> */}
       <About />

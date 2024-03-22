@@ -4,7 +4,7 @@ import {
   , Nav
   , Navbar
 } from 'react-bootstrap';
-import { Header } from '../../mock/data';
+import { headerData } from '../../mock/data';
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 
 import './Navbar.css'
@@ -19,7 +19,7 @@ export const TopBar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto">
-            {Header.map((item, index) => (
+            {headerData.map((item, index) => (
               <Nav.Link href={item.to} className={item.className} key={index}>{item.title}</Nav.Link>
             ))}
           </Nav>

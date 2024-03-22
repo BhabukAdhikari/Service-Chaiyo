@@ -1,9 +1,8 @@
 import React from "react";
 //layout
 import { MainLayout } from "./app/layout";
-import { Searchbar } from "./app/components/Searchbar";
 import './App.css'
-import { PopularCategories } from "./app/pages/PopularCategories/PopularCategories";
+import { PopularCategories } from "./app/pages/Popular-Categories/PopularCategories";
 
 const App = () => {
   return (

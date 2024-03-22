@@ -1,4 +1,11 @@
 import automotiveImage from '../assets/images/automotive.png';
+import carDealer from '../assets/images/car-dealer-80x80.png';
+import carServices from '../assets/images/carservice.png';
+import electrician from '../assets/images/electrician-80x80.png'
+import cafe from '../assets/images/cafe-80x80.png'
+import business from '../assets/images/busiess-80x80.png'
+import cabService from '../assets/images/cab-service-80x80.png'
+import coachingCenter from '../assets/images/choachng-canter-80x80.png'
 
 export const cardsData = [
     {
@@ -15,44 +22,44 @@ export const cardsData = [
     },
     {
       id: 3,
-      title: "Another Category",
-      imageSrc: "https://example.com/another-image.png",
+      title: "Car Dealer",
+      imageSrc: carDealer,
       providersCount: 4,
     },
     {
       id: 4,
-      title: "Another Category",
-      imageSrc: "https://example.com/another-image.png",
+      title: "Electrician",
+      imageSrc: electrician,
       providersCount: 36,
     },
     {
       id: 5,
-      title: "Another Category",
-      imageSrc: "https://example.com/another-image.png",
+      title: "Cafe",
+      imageSrc: cafe,
       providersCount: 5,
     },
     {
       id: 6,
-      title: "Another Category",
-      imageSrc: "https://example.com/another-image.png",
+      title: "Car Service",
+      imageSrc: carServices,
       providersCount: 3,
     },
     {
       id: 7,
-      title: "Another Category",
-      imageSrc: "https://example.com/another-image.png",
+      title: "Business",
+      imageSrc: business,
       providersCount: 34,
     },
     {
       id: 8,
-      title: "Another Category",
-      imageSrc: "https://example.com/another-image.png",
+      title: "Cab Service",
+      imageSrc: cabService,
       providersCount: 5,
     },
     {
       id: 9,
-      title: "Another Category",
-      imageSrc: "https://example.com/another-image.png",
+      title: "Coaching Center",
+      imageSrc: coachingCenter,
       providersCount: 13,
     },
   ];
