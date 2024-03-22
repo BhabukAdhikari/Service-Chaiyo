@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { SupplierValidation, loginValidationSchema } from '../schema/index';
+import { SupplierValidation } from '../schema/index';
 import { ErrorMessage, Formik } from 'formik';
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
