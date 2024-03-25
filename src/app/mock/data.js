@@ -28,7 +28,7 @@ export const Header = [
     },
     {
         id: 6,
-        title: 'Become a Supplier',
+        title: 'Supplier',
         to: '/supplier'
     },
 ]

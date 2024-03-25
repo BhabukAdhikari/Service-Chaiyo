@@ -8,11 +8,10 @@ import { loginValidationSchema } from '../schema';
 import { api } from '../setup/api';
 
 import './Login.css';
-import { Toaster } from '../components/Toast/Toast';
 
 export const LoginForm = () => {
     const [token, setToken] = useState({})
-    
+
     const navigate = useNavigate();
 
     const initialValues = {
@@ -23,12 +22,16 @@ export const LoginForm = () => {
 
     const handleForm = async (values, actions) => {
         const { name, email, password } = values;
+        if (name === localStorage.getItem('name') && email === localStorage.getItem('email') && password === localStorage.getItem('password')) {
+            console.log('Login Successfull')
+        } else {
+            console.log('Login Failed. Please try again.');
+        }
         try {
             const res = await api.post('/login', { name, email, password })
-            console.log(res);
             setToken(res.data)
+            console.log(token);
             navigate('/')
-            alert('Succesfull logined')
             console.log(response.data);
         } catch (error) {
             console.error('Error submitting form:', error);
