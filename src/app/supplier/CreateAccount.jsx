@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { SupplierValidation, loginValidationSchema } from '../schema/index';
+// import { SupplierValidation } from '../schema/index';
 import { ErrorMessage, Formik } from 'formik';
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -29,7 +29,7 @@ export const SupplierAccount = () => {
     return (
         <Formik
             initialValues={{ companyName: '', phoneNumber: '', address: '', panNumber: '', establishedDate: new Date().toISOString().split('T')[0] }}
-            validationSchema={SupplierValidation}
+            // validationSchema={SupplierValidation}
             onSubmit={handleForm}
         >
             {({ values, handleChange, handleSubmit, isSubmitting }) => (
@@ -44,7 +44,7 @@ export const SupplierAccount = () => {
                             <ErrorMessage name="companyName" component="div" className="error mt-2 text-danger d-flex justify-content-end" />
                         </Form.Group>
                         <Form.Group>
-                            <Form.Label className='mt-3'>Phone Number : </Form.Label>
+                            <Form.Label className='mt-1'>Phone Number : </Form.Label>
                             <Form.Control type="text" name="phoneNumber" value={values.phoneNumber} onChange={handleChange} placeholder='Enter your PhoneNumber' />
                             <ErrorMessage name="phoneNumber" component="div" className="error mt-2 text-danger d-flex justify-content-end" />
                         </Form.Group>

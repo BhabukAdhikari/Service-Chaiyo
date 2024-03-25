@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { loginValidationSchema } from '../schema/index';
+// import { loginValidationSchema } from '../schema/index';
 import { ErrorMessage, Formik } from 'formik';
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -11,27 +11,31 @@ import { api } from '../setup/api';
 import '../auth/Login.css';
 
 export const SignUpForm = () => {
+    
     const navigate = useNavigate();
 
-    const handleForm = async (values, actions) => {
-        const { name, email, password } = values;
+    const handleSubmit = async (values) => {
         try {
-            const res = await api.post('/supplierRegistration', { name, email, password })
-            console.log(res.status);
-            console.log(res.data);
-            navigate('/');
-            alert('Sign up successful!');
+            const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYXl1c2giLCJyb2xlIjoic3VwcGxpZXIiLCJpYXQiOjE3MTEzNjAxNDB9.VezKP2IPRTvrG7dT8AlFhyPffLNl8GiUehbFw3BQE18"; 
+            const config = {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            };
+    
+            const res = await api.post('/login', values, config);
+            console.log("Form submitted successfully:", res.data);
+            navigate('/supplier')
         } catch (error) {
-            console.log('Sign up failed:', error);
-            alert('Sign up failed. Please try again.');
+            console.error("Error submitting form:", error);
         }
     };
 
     return (
         <Formik
             initialValues={{ name: '', email: '', password: '' }}
-            validationSchema={loginValidationSchema}
-            onSubmit={handleForm}
+            // validationSchema={}
+            onSubmit={handleSubmit}
         >
             {({ values, handleChange, handleSubmit }) => (
                 <Form onSubmit={handleSubmit}>
