@@ -1,17 +1,19 @@
-import React from 'react'
+import React from 'react';
 import {
-  Container
-  , Nav
-  , Navbar
+  Container,
+  Nav,
+  Navbar
 } from 'react-bootstrap';
-import { headerData } from '../../mock/data';
+import { Header } from '../../mock/data';
+
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 
-import './Navbar.css'
+
+import './Navbar.css';
 
 export const TopBar = () => {
-  return (
 
+  return (
     <Navbar collapseOnSelect expand="lg" className="nav-bg">
       <Container fluid>
         <Navbar.Brand href="/"> <TfiHeadphoneAlt />
@@ -26,12 +28,10 @@ export const TopBar = () => {
           <Nav className='auth-head'>
             <Nav.Link href="/login">Login</Nav.Link>
             <div className="vertical"></div>
-            <Nav.Link href="/sign-up">
-              SignUp
-            </Nav.Link>
+            <Nav.Link href="/register">SignUp</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  )
-}
+  );
+};

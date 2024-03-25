@@ -1,0 +1,61 @@
+.service-image {
+    height: 50vh;
+    width: 100% !important;
+    background-repeat: no-repeat;
+    background: url('../../assets/images/service.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.setting-image {
+    position: relative;
+    top: 18vh;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.service-cards {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.service-card{
+    padding-bottom: 5%;
+}
+.card-service {
+    height: 30vh;
+    width: 100% !important;
+    background-repeat: no-repeat;
+    background: url('../../assets/images/barber.jpg');
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+.card-service1{
+    height: 30vh;
+    width: 100% !important;
+    background-repeat: no-repeat;
+    background: url('../../assets/images/ladyEng.jpg');
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+.card-service2{
+    height: 30vh;
+    width: 100% !important;
+    background-repeat: no-repeat;
+    background: url('../../assets/images/carpenter.jpg');
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+.image-title {
+    color: white;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10vh;
+}
