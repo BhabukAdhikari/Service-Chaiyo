@@ -18,10 +18,14 @@ export const SignUpForm = () => {
     const handleForm = async (values, actions) => {
         const { name, email, password } = values;
         try {
+            localStorage.setItem('name', name)
+            localStorage.setItem('email', email)
+            localStorage.setItem('password', password)
+            console.log({ name, email, password });
             const res = await api.post('/registration', { name, email, password })
             console.log(res.status);
             setIsSigned(true)
-            navigate('/');
+            navigate('/login');
         } catch (error) {
             alert('Sign up failed. Please try again.');
         }
