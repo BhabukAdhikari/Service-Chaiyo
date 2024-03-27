@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-// import { loginValidationSchema } from '../schema/index';
 import { ErrorMessage, Formik } from 'formik';
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
+import { SupplierValidation } from '../schema';
 import { api } from '../setup/api';
 
 import '../auth/Login.css';
@@ -16,12 +16,6 @@ export const SignUpForm = () => {
 
     const handleSubmit = async (values) => {
         try {
-            const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYXl1c2giLCJyb2xlIjoic3VwcGxpZXIiLCJpYXQiOjE3MTEzNjAxNDB9.VezKP2IPRTvrG7dT8AlFhyPffLNl8GiUehbFw3BQE18"; 
-            const config = {
-                headers: {
-                    'Authorization': `Bearer ${token}`
-                }
-            };
     
             const res = await api.post('/login', values, config);
             console.log("Form submitted successfully:", res.data);
@@ -34,7 +28,7 @@ export const SignUpForm = () => {
     return (
         <Formik
             initialValues={{ name: '', email: '', password: '' }}
-            // validationSchema={}
+            validationSchema={SupplierValidation}
             onSubmit={handleSubmit}
         >
             {({ values, handleChange, handleSubmit }) => (

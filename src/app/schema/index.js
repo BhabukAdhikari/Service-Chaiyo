@@ -15,14 +15,14 @@ export const loginValidationSchema = Yup.object().shape({
 });
 
 
-// const phoneRegExp = /^[0-9]{4,15}$/;
+const phoneRegExp = /^[0-9]{4,15}$/;
 
-// export const SupplierValidation = Yup.object().shape({
-//     companyName: Yup.string()
-//         .required('Company Name is required'),
-//     phoneNumber: Yup.string()
-//         .required("Phone number is required")
-//         .matches(phoneRegExp, 'Phone number is not valid')
-//         .min(3, "Phone number is too short")
-//         .max(10, "Phone number is too long"),
-// })
+export const SupplierValidation = Yup.object().shape({
+    companyName: Yup.string()
+        .required('Company Name is required'),
+    phoneNumber: Yup.string()
+        .required("Phone number is required")
+        .matches(phoneRegExp, 'Phone number is not valid')
+        .min(3, "Phone number is too short")
+        .max(10, "Phone number is too long"),
+})
