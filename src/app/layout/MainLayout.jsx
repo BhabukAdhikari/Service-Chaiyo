@@ -1,3 +1,5 @@
+import { React } from "react";
+import { Footer, TopBar } from "../components";
 import React from "react";
 import { Footer, TopBar } from "../components";
 
