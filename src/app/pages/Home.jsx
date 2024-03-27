@@ -6,7 +6,8 @@ import { MainLayout } from "../layout";
 import { Header } from "../components";
 import { About } from "./About";
 import { Testimonial } from "./Testimonals";
-import { PopularCategories } from "./PopularCategories";
+import { PopularCategories } from "./Popular-Categories/PopularCategories";
+import { StaticsCounter } from "./Statics-Counter/StaticsCounter";
 
 export const Home = () => {
   return (
@@ -15,6 +16,7 @@ export const Home = () => {
       <About />
       <Testimonial />
       <PopularCategories />
+      <StaticsCounter/>
     </MainLayout>
   );
 };

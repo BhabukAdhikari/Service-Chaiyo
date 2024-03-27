@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Home } from "./app/pages/Home";
 import { AboutUs } from "./app/pages/AboutUs/AboutUs";
@@ -12,7 +12,7 @@ import { Supplier } from "./app/supplier/Supplier";
 import { SupplierSignUp } from "./app/supplier/SupplierSignUp";
 import { SupplierRegistration } from "./app/supplier/Accout";
 
-import './App.css'
+import "./App.css";
 
 const App = () => {
   return (
@@ -29,7 +29,6 @@ const App = () => {
 
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<SignUp />} />
-
       </Routes>
     </BrowserRouter>
   );

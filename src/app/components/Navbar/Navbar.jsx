@@ -4,7 +4,7 @@ import {
   Nav,
   Navbar
 } from 'react-bootstrap';
-import { Header } from '../../mock/data';
+import { headerData } from '../../mock/data';
 
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 
