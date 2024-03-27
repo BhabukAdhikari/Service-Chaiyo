@@ -11,27 +11,30 @@ import { SignUp } from "./app/auth/Sign";
 import { Supplier } from "./app/supplier/Supplier";
 import { SupplierSignUp } from "./app/supplier/SupplierSignUp";
 import { SupplierRegistration } from "./app/supplier/Accout";
+import { AuthProvider } from "./app/Auth-Provider/Provider";
 
 import './App.css'
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/service" element={<Services />} />
-        <Route path="/jobs" element={<Jobs />} />
+    <AuthProvider >
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/service" element={<Services />} />
+          <Route path="/jobs" element={<Jobs />} />
 
-        <Route path="/supplier" element={<Supplier />} />
-        <Route path="/supplier/account" element={<SupplierRegistration />} />
-        <Route path="/supplier/sign-up" element={<SupplierSignUp />} />
+          <Route path="/supplier" element={<Supplier />} />
+          <Route path="/supplier/account" element={<SupplierRegistration />} />
+          <Route path="/supplier/sign-up" element={<SupplierSignUp />} />
 
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<SignUp />} />
 
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   );
 };
 

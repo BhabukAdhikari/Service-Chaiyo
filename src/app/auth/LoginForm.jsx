@@ -8,6 +8,7 @@ import { loginValidationSchema } from '../schema';
 import { api } from '../setup/api';
 
 import './Login.css';
+import { setLocalStorage } from '../utils/local-storage';
 
 export const LoginForm = () => {
     const [token, setToken] = useState({})
@@ -30,7 +31,8 @@ export const LoginForm = () => {
         try {
             const res = await api.post('/login', { name, email, password })
             setToken(res.data)
-            console.log(token);
+            setLocalStorage('token', res.data.token)
+            console.log({ token: res.data.token });
             navigate('/')
             console.log(response.data);
         } catch (error) {
