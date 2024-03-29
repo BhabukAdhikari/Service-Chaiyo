@@ -1,0 +1,39 @@
+.statics-section {
+    padding: 5rem;
+    text-align: center;
+    border-radius: 40px;
+}
+.boxes{
+    justify-content: space-between;
+}
+
+.counter-box {
+    width: 170px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+.counter-title {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.counter-para {
+    font-size: 17px;
+    font-weight: 700;
+}
+@media (max-width: 499px) {
+    .boxes{
+        justify-content: center;
+    }
+  }
+@media (min-width: 768px) {
+        .boxes{
+            margin: 0 150px;
+        }
+}
+
+
+  

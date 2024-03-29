@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
-import { api } from '../setup/api'
+import { api } from "../setup/api";
 
 export const Supplier = ({ userId }) => {
+    const [baseImage, setBaseImage] = useState('');
     const [form, setForm] = useState({
         category: '',
-        userId: '2',
+        userId: userId,
         supplierInfo: {
             companyName: '',
             phoneNumber: '',
@@ -19,47 +20,27 @@ export const Supplier = ({ userId }) => {
                 service: '',
                 price: '',
             },
+            {
+                service: '',
+                price: '',
+            }
         ]
     });
-    const [baseImage, setBaseImage] = useState('');
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        const [parent, child] = name.split('.');
-        if (child) {
-            setForm(prevState => ({
-                ...prevState,
-                [parent]: {
-                    ...prevState[parent],
-                    [child]: value
-                }
-            }));
-        } else {
-            if (name === 'userId') {
-                setForm(prevState => ({
-                    ...prevState,
-                    category: prevState.category,
-                    [name]: value,
-                    ...prevState.supplierInfo,
-                    imgPaths: prevState.imgPaths,
-                    services: prevState.services
-                }));
-            } else {
-                setForm(prevState => ({
-                    ...prevState,
-                    [name]: value,
-                    userId: prevState.userId
-                }));
-            }
-        }
+        setForm(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
     };
-
 
     const uploadImage = async (e) => {
         const file = e.target.files[0];
         try {
             const converter = await convertToBase64(file);
             setBaseImage(converter);
+            // Update the imgPaths state
             setForm(prevState => ({
                 ...prevState,
                 imgPaths: [converter]
@@ -86,17 +67,16 @@ export const Supplier = ({ userId }) => {
     const handleFormSubmit = async (e) => {
         e.preventDefault();
         console.log(form);
-        try {
-            const formData = {
-                ...form,
-                userId: userId
-            };
-
-            const res = await api.post('/supplierInformation', formData);
-            console.log("Form submitted successfully:", res.data);
-        } catch (error) {
-            console.error("Error submitting form:", error);
-        }
+        // try {
+        //     const formData = {
+        //         ...form,
+        //         userId: userId
+        //     };
+        //     const res = await api.post('/supplierInformation', formData);
+        //     console.log("Form submitted successfully:", res.data);
+        // } catch (error) {
+        //     console.error("Error submitting form:", error);
+        // }
     };
 
     return (
@@ -110,7 +90,7 @@ export const Supplier = ({ userId }) => {
                     type="text"
                     name="category"
                     value={form.category}
-                    placeholder="Enter your Category Name"
+                    placeholder="Enter your name"
                     onChange={handleInputChange}
                 />
                 <label>CompanyName:</label>
@@ -123,7 +103,7 @@ export const Supplier = ({ userId }) => {
                 />
                 <label>PhoneNumber:</label>
                 <input
-                    type="number"
+                    type="text"
                     name="supplierInfo.phoneNumber"
                     value={form.supplierInfo.phoneNumber}
                     placeholder="Enter your phoneNumber"
@@ -150,10 +130,13 @@ export const Supplier = ({ userId }) => {
                     type="file"
                     onChange={uploadImage}
                 />
-                {/* {baseImage && <img src={baseImage} alt="Uploaded" height="200px" />} */}
-                <label>Service:</label>
-                <input type="text" name="services[0].service" value={form.services.service} onChange={handleInputChange} placeholder="Enter your service" />
-                <input type="number" name="services[0].price" value={form.services.price} onChange={handleInputChange} placeholder="Enter your price" />
+                {baseImage && <img src={baseImage} alt="Uploaded" height="200px" />}
+                <label>Services 1:</label>
+                <input type="text" name="services[0].service" value={form.services[0].service} onChange={handleInputChange} placeholder="Enter your service" />
+                <input type="text" name="services[0].price" value={form.services[0].price} onChange={handleInputChange} placeholder="Enter your price" />
+                <label>Services 2:</label>
+                <input type="text" name="services[1].service" value={form.services[1].service} onChange={handleInputChange} placeholder="Enter your service" />
+                <input type="text" name="services[1].price" value={form.services[1].price} onChange={handleInputChange} placeholder="Enter your price" />
                 <button type="submit">Submit</button>
             </form>
         </>
