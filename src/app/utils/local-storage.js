@@ -13,12 +13,3 @@ export const getLocalStorage = (key) => {
 export const setRemoteStorage = (key) => {
     localStorage.removeItem(key);
 }
-
-// if (res.data) {
-//     setLocalStorage('token', res.data.token);
-// }
-
-
-
-// import { setLocalStorage } from '../utils/local-storage';
-// import { SupplierValidation } from '../schema';
