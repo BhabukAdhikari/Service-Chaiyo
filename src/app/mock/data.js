@@ -29,7 +29,7 @@ export const headerData = [
     {
         id: 6,
         title: 'Supplier',
-        to: '/supplier'
+        to: '/hero'
     },
 ]
 
