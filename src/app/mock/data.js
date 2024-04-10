@@ -1,6 +1,6 @@
 import bikash from '../images/bikash.jpg';
 
-export const Header = [
+export const headerData = [
     {
         id: 1,
         title: 'Home',
@@ -29,7 +29,7 @@ export const Header = [
     {
         id: 6,
         title: 'Supplier',
-        to: '/supplier'
+        to: '/hero'
     },
 ]
 
