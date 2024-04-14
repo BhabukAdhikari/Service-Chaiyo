@@ -3,16 +3,44 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "./auth.css";
 import useSign from "../Hooks/useSign";
+import { useNavigate } from "react-router-dom";
 
-
-
-
-
- 
 const SignUpPage = () => {
-  const {handleCompanyName , handleAddress,handleSubmit , handleCompanyCategory , handleEmail , handlePhoneNumber , handlePanNumber , handleSerciceCategory , handleNewDate , handlePanCertificate , handleCompanyDocumentVerification , handleRegistrationNumber}  = useSign();
+  const {
+    handlePassword,
+    handleCompanyName,
+    handleAddress,
+    handleCompanyCategory,
+    handleEmail,
+    handlePhoneNumber,
+    handlePanNumber,
+    handleNewDate,
+    handlePanCertificate,
+    handleCompanyDocumentVerification,
+    handleRegistrationNumber,
+    createMutatioFunction,
+    newData
+  } = useSign();
+  const navigate = useNavigate();
+  const emailValue= newData.Email;
 
-  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // try {
+    //   const response = await axios.post('/', { emailValue});
+    //   console.log(response.data);
+    // } catch (error) {
+    //   console.error('Error sending email:', error);
+    // }
+
+    createMutatioFunction.mutate({
+      ...newData,
+    });
+    console.log("user is logged");
+    alert("created");
+    navigate("/otp");
+  };
+
   return (
     <div className="sign-component">
       <h1 className="sign-title">Register</h1>
@@ -157,23 +185,10 @@ const SignUpPage = () => {
           <option value="3">Three</option>
         </Form.Select>
 
-        <Form.Select
-          aria-label="Default select example"
-          style={{ marginLeft: "10%", marginTop: "60px", width: "23%" }}
-          name="ServiceCategory"
-          onChange={handleSerciceCategory}
-          required
-        >
-          <option>Service Category</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </Form.Select>
-
         <Form.Group
           controlId="formFileMultiple"
           className="mb-3"
-          style={{ marginLeft: "40%", marginTop: "-74px" }}
+          style={{ marginLeft: "10%", marginTop: "30px" }}
         >
           <Form.Label>Company Document verification</Form.Label>
           <Form.Control
@@ -181,8 +196,25 @@ const SignUpPage = () => {
             name="CompanyDocumentVerification"
             multiple
             onChange={handleCompanyDocumentVerification}
-            style={{ width: "45%" }}
+            style={{ width: "30%" }}
             accept="images/*"
+            required
+          />
+        </Form.Group>
+
+        <Form.Group
+          className="mb-3"
+          controlId="formBasiAddress"
+          style={{ marginLeft: "40%", marginTop: "-88px" }}
+        >
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            controlId="formPlaintextPassword"
+            type="Password"
+            placeholder="Password"
+            name="Password"
+            onChange={handlePassword}
+            style={{ width: "90%" }}
             required
           />
         </Form.Group>

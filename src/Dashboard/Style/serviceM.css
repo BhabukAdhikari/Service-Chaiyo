@@ -1,0 +1,17 @@
+.section{
+margin-top: -37%;
+margin-left: 300px;
+}
+
+.search-bar{
+    border: 2px solid #39ac92;
+    border-radius: 10px;
+    padding: 6px;
+    margin-left: 3px;
+}
+
+.crud-section{
+    margin-top: 20px;
+    display: flex;
+}
+

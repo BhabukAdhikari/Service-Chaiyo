@@ -28,7 +28,7 @@ export const headerData = [
     },
     {
         id: 6,
-        title: 'Supplier',
+        title: 'Become a Supplier',
         to: '/hero'
     },
 ]

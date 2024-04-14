@@ -4,10 +4,10 @@ import { Container } from "react-bootstrap";
 import axios from "axios";
 
 import "./Hero.css";
-import { useInitialFetch } from "../../hooks/useInitialFetch";
+
 
 export const Hero = () => {
-  const {data} = useInitialFetch('')
+  
 
   return (
     <div className="hero">
@@ -16,11 +16,11 @@ export const Hero = () => {
         <h4 className="text-center text-light">
           Find your needed service at your own door
         </h4>
-        {data ? (
+        {/* {data ? (
           <pre>{JSON.stringify(data, null, 2)}</pre>
         ) : (
           <p>Loading...</p>
-        )}
+        )} */}
       </Container>
       <Searchbar />
     </div>

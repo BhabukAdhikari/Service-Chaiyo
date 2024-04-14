@@ -1,41 +1,46 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter as Router, Navigate } from "react-router-dom";
 import { Home } from "./app/pages/Home";
 import { AboutUs } from "./app/pages/AboutUs/AboutUs";
 import { Services } from "./app/pages/Services";
 import { Jobs } from "./app/pages/Jobs/Jobs";
-import { Login } from "./app/auth/Login";
-import { SignUp } from "./app/auth/Sign";
-import { Supplier } from "./app/supplier/Supplier";
-import { SupplierSignUp } from "./app/supplier/SupplierSignUp";
-import { SupplierRegistration } from "./app/supplier/Accout";
-import { AuthProvider } from "./app/Auth-Provider/Provider";
 import "./App.css";
 import Hero from "./Supplier-Section/Hero/components/Hero";
-import LoginPage from './Supplier-Section/Auth-Page/LoginPage';
-import SignUpPage from './Supplier-Section/Auth-Page/SignUpPage';
 import HeroTwo from "./Supplier-Section/Hero/components/HeroTwo";
+import OTP from "./Supplier-Section/Auth-Page/OTP";
+import AdminAuth from "./Supplier-Section/Auth-Page/AdminAuth";
+import Dashboard from "./Dashboard/Dashboard";
+import Request from "./Dashboard/Pages/Request";
+import Review from "./Dashboard/Pages/Review";
+import Schedule from "./Dashboard/Pages/Schedule";
+import ServiceManagement from "./Dashboard/Pages/ServiceManagement";
 
 const App = () => {
+  // Your logic to determine whether to redirect
+  const shouldRedirect = true; // Change this condition as needed
+
   return (
-    <AuthProvider>
-      <BrowserRouter>
+    <Router>
+      <div className="home-section">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/service" element={<Services />} />
           <Route path="/jobs" element={<Jobs />} />
-          <Route path="/supplier/account" element={<SupplierRegistration />} />
-          <Route path="/supplier/sign-up" element={<SupplierSignUp />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<SignUp />} />
-          <Route path="/hero" element={<Hero/>}/>
-          <Route path="/herotwo" element={<HeroTwo/>}/>
-          <Route exact path='/loginSupplier' element={<LoginPage />} />
-          <Route exact path='/signUpSupplier' element={<SignUpPage />} />
+          <Route exact path="/otp" element={<OTP />} />
+          <Route exact path="/AdminAuth" element={<AdminAuth />} />
+          <Route path="/hero" element={<Hero />} />
+          <Route path="/herotwo" element={<HeroTwo />} />
+          <Route path="/serviceM" element={<ServiceManagement />} />
+          <Route path="/schedule" element={<Schedule />} />
+          <Route path="/request" element={<Request />} />
+          <Route path="/review" element={<Review />} />
+          <Route path="/dashboard" element={<Dashboard/>}/>
         </Routes>
-      </BrowserRouter>
-    </AuthProvider>
+    </div>
+
+    
+    </Router>
   );
 };
 

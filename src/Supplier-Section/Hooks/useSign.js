@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { SupplierSignUpData } from "../AuthApi/Api";
 import { QueryClient, useMutation } from "@tanstack/react-query";
+import axios from "axios";
+
 
 const useSign = () => {
   const [newData, setNewData] = useState({
@@ -13,9 +15,14 @@ const useSign = () => {
     NewDate: "",
     Address: "",
     CompanyCategory: "",
-    SerciceCategory: "",
     CompanyDocumentVerification: null,
+    Password: "",
   });
+
+  
+
+  
+  
 
   const handleCompanyName = (e) => {
     const value = e.target.value;
@@ -103,14 +110,6 @@ const useSign = () => {
     });
   };
 
-  const handleSerciceCategory = (e) => {
-    const value = e.target.value;
-    setNewData({
-      ...newData,
-      [e.target.name]: value,
-    });
-  };
-
   const handleCompanyDocumentVerification = async (e) => {
     const file = e.target.files[0];
     const CompanyDocumentVerification = await convertToBase64(file);
@@ -130,30 +129,37 @@ const useSign = () => {
     onSuccess: () => {
       QueryClient.invalidateQueries({ queryKey: ["load"] });
       console.log("sucess");
+      alert("your company is register");
+      setIsCreated(true);
     },
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    createMutatioFunction.mutate({
+  const handlePassword = (e) => {
+    const value = e.target.value;
+    setNewData({
       ...newData,
+      [e.target.name]: value,
     });
   };
+
+  
 
   return {
     handleCompanyName,
     handleAddress,
-    handleSubmit,
+    // handleSubmit,
     handleCompanyCategory,
     handleEmail,
     handlePhoneNumber,
     handlePanNumber,
-    handleSerciceCategory,
     handleNewDate,
     handlePanCertificate,
     handleCompanyDocumentVerification,
     handleRegistrationNumber,
+    handlePassword,
+    // isCreated,
+    createMutatioFunction, 
+    newData
   };
 };
 

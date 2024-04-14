@@ -1,11 +1,9 @@
 import profileImage from './profile.jpg'
-import { AuthContext } from '../../Auth-Provider/Provider'
 import { useContext, useState } from 'react'
 
 import './Profile.css'
 export const Profile = () => {
     const [show, setShow] = useState(false)
-    const { name } = useContext(AuthContext)
     const handleDropdown = () => {
         setShow(!show)
     }

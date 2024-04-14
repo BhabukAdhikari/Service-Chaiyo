@@ -4,10 +4,10 @@ import Form from "react-bootstrap/Form";
 import "./auth.css";
 import "./Login.css";
 
-const LoginPage = () => {
+const AdminAuth = () => {
   return (
     <div className="login-component">
-      <h1 className="login-title">VERIFICATION</h1>
+      <h1 className="login-title">Admin</h1>
       <Form style={{ width: "100%", marginLeft: "-5%", marginTop: "5%" }}>
         <Form.Group
           className="mb-3"
@@ -58,4 +58,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default AdminAuth;

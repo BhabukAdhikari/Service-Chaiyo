@@ -1,7 +1,9 @@
+import { useQuery } from '@tanstack/react-query' 
+import { SupplierLoginData } from '../AuthApi/Api'
 
+const useLogin = () => {
 
-const useLoginFunction = () => {
- 
+   
 }
 
-export default useLoginFunction
+export default useLogin;
