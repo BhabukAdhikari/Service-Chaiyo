@@ -9,11 +9,7 @@ function ModalBtn() {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const {
-    handleChange,
-    handleServiceImage,
-    handleSubmit
-  } = useModal();
+  const { handleChange, handleServiceImage, handleSubmit } = useModal();
 
   return (
     <>
@@ -97,11 +93,9 @@ function ModalBtn() {
                 autoFocus
               />
             </Form.Group>
-
-           
           </Form>
         </Modal.Body>
- <Modal.Footer>
+        <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>

@@ -2,7 +2,6 @@ import React from "react";
 import "../Style/sidebar.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-
 import {
   IconButton,
   Box,
@@ -14,7 +13,6 @@ import {
   Drawer,
   DrawerContent,
   useDisclosure,
-  
 } from "@chakra-ui/react";
 import {
   FiHome,
@@ -27,22 +25,30 @@ import {
 import TopBar from "./Topbar";
 import { Link } from "react-router-dom";
 
-
 const LinkItems = [
-  { name: "Dashboard", icon: FiHome  , link: "/main"},
-  { name: "Service.M", icon: FiTrendingUp  , link: "/serviceM"},
-  { name: "Request", icon: FiCompass , link: "/request" },
-  { name: "Schedule", icon: FiCompass  , link: "/schedule"},
-  { name: "Review", icon: FiStar , link: "/review" },
+  { name: "Dashboard", icon: FiHome, link: "/main" },
+  { name: "Service", icon: FiTrendingUp, link: "/serviceM" },
+  { name: "Request", icon: FiCompass, link: "/request" },
+  { name: "Schedule", icon: FiCompass, link: "/schedule" },
+  { name: "Review", icon: FiStar, link: "/review" },
 ];
 
 export default function Sidebar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-  
-    <Box minH="100vh" bg={useColorModeValue("gray.100", "gray.900")} width={"10%"} mt={"4px"}>
-      <SidebarContent onClose={() => onClose} display={{ base: "none", md: "block" }} />
+    <Box
+      minH="100vh"
+      // bg={useColorModeValue("gray.100", "gray.900")}
+      width={"10%"}
+      mt={"0px"}
+      style={{ zIndex: 1000 }}
+     
+    >
+      <SidebarContent
+        onClose={() => onClose}
+        display={{ base: "none", md: "block" }}
+      />
       <Drawer
         isOpen={isOpen}
         placement="left"
@@ -58,11 +64,10 @@ export default function Sidebar() {
       <TopBar />
       <MobileNav display={{ base: "flex", md: "none" }} onOpen={onOpen} />
       <Box ml={{ base: 0, md: 60 }} p="4">
-     {/* content */}
-     {/* hello */}
+        {/* content */}
+        {/* hello */}
       </Box>
     </Box>
- 
   );
 }
 const SidebarContent = ({ onClose, ...rest }) => {
@@ -72,7 +77,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
       borderRight="1px"
       borderRightColor={useColorModeValue("gray.200", "gray.700")}
       w={{ base: "full", md: 60 }}
-      zIndex="1"
+      zIndex="1000"
       pos="fixed"
       h="full"
       {...rest}
@@ -87,13 +92,13 @@ const SidebarContent = ({ onClose, ...rest }) => {
         <NavItem
           key={link.name}
           icon={link.icon}
-          color="white" 
+          color="white"
           fontWeight="bold"
           lineHeight="19px"
           className={link.name}
-          marginTop= "20px"
+          marginTop="20px"
         >
-        <Link to={link.link}>{link.name}</Link>
+          <Link className="link" to={link.link}>{link.name}</Link>
         </NavItem>
       ))}
     </Box>

@@ -4,3 +4,7 @@
     color: #39ac92 !important;
   }
   
+ .link:hover{
+text-decoration: none;
+color: #39ac92;
+ }

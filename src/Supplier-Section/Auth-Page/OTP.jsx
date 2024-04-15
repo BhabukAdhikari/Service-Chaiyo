@@ -21,7 +21,7 @@ const OTP = () => {
     console.log(isCreated);
 
     if (isCreated === true) {
-      naivgate("/dashboard");
+      naivgate("/main");
     } else {
       alert("try again");
     }

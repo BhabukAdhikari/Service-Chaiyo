@@ -1,4 +1,14 @@
+
+
 .main-section{
     margin-top: -37%;
-    margin-left: 300px;
+    margin-left: 20%;
+    display: flex;
+    flex-wrap: wrap;
     }
+
+    .table-sections{
+        margin-top: 90px;
+    }
+
+    

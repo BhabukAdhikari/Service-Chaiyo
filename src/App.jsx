@@ -1,5 +1,10 @@
 import React from "react";
-import { Routes, Route, BrowserRouter as Router, Navigate } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  BrowserRouter as Router,
+  Navigate,
+} from "react-router-dom";
 import { Home } from "./app/pages/Home";
 import { AboutUs } from "./app/pages/AboutUs/AboutUs";
 import { Services } from "./app/pages/Services";
@@ -17,8 +22,6 @@ import ServiceManagement from "./Dashboard/Pages/ServiceManagement";
 import Main from "./Dashboard/Pages/Main";
 
 const App = () => {
-  
-
   return (
     <Router>
       <div className="home-section">
@@ -35,12 +38,10 @@ const App = () => {
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/request" element={<Request />} />
           <Route path="/review" element={<Review />} />
-          <Route path="/dashboard" element={<Dashboard/>}/>
-          <Route path="/main" element={<Main/>}/>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/main" element={<Main />} />
         </Routes>
-    </div>
-
-    
+      </div>
     </Router>
   );
 };

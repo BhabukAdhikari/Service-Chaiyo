@@ -1,5 +1,7 @@
+import { useQuery } from "@tanstack/react-query";
 import { th } from "date-fns/locale";
 import Table from "react-bootstrap/Table";
+import { ServiceDataReceived } from "../DashApi/Api";
 
 function Tables() {
   const tableHeading = [
@@ -7,41 +9,67 @@ function Tables() {
     { name: "description" },
     { name: "price" },
     { name: "availability" },
-    { name: "image" }
+    { name: "image" },
   ];
 
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ["serviceData"],
+    queryFn: ServiceDataReceived,
+  });
+
+  if (isLoading) {
+    return <div>...loading</div>;
+  }
+
+  if (isError) {
+    return <div>...error occured</div>;
+  }
+
   return (
-    <Table responsive className="mx-auto" style={{ width: '1000px'  , marginTop: "30px"}}>
+    <Table
+      responsive
+      className="mx-auto"
+      style={{ width: "1000px", marginTop: "30px" }}
+    >
       <thead>
         <tr>
-          <th>#</th>
           {tableHeading.map((item, index) => (
-            <th key={index}>{item.name}</th>
+            <th
+              style={{ backgroundColor: "#39ac92", color: "white"  , border: "none"}}
+              key={index}
+            >
+              {item.name}
+            </th>
           ))}
         </tr>
       </thead>
-      <tbody>
-        <tr className="mb-4">
-          <td>1</td>
-          {Array.from({ length: 5 }).map((_, index) => (
-            <td key={index}>Table cell {index}</td>
-          ))}
-        </tr>
-        <tr className="mb-4">
-          <td>2</td>
-          {Array.from({ length: 5 }).map((_, index) => (
-            <td key={index}>Table cell {index}</td>
-          ))}
-        </tr>
-        <tr className="mb-4">
-          <td>3</td>
-          {Array.from({ length: 5 }).map((_, index) => (
-            <td key={index}>Table cell {index}</td>
-          ))}
-        </tr>
-      </tbody>
+
+      {data.map((item, index) => {
+        return (
+          <tbody key={index}>
+            <br />
+            <tr>
+              <td style={{ backgroundColor: "#39ac92", color: "white" , border: "none" }}>
+                {item.serviceName}
+              </td>
+              <td style={{ backgroundColor: "#39ac92", color: "white",border: "none" }}>
+                {item.description}
+              </td>
+              <td style={{ backgroundColor: "#39ac92", color: "white",border: "none" }}>
+                {item.price}
+              </td>
+              <td style={{ backgroundColor: "#39ac92", color: "white",border: "none" }}>
+                {item.availability}
+              </td>
+              <td style={{ backgroundColor: "#39ac92", color: "white" ,border: "none"}}>
+                <img src={item.serviceImage} alt="" />
+              </td>
+            </tr>
+          </tbody>
+        );
+      })}
     </Table>
   );
 }
-
+<tbody></tbody>;
 export default Tables;

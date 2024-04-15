@@ -47,7 +47,7 @@ const useModal = () => {
   };
 
   const createMutationFunction = useMutation({
-    mutationFn: ServiceData, 
+    mutationFn: ServiceData,
     onSuccess: () => {
       QueryClient.invalidateQueries({ queryKey: ["serviceData"] });
       console.log("success");
@@ -66,7 +66,7 @@ const useModal = () => {
   return {
     handleChange,
     handleServiceImage,
-    handleSubmit
+    handleSubmit,
   };
 };
 

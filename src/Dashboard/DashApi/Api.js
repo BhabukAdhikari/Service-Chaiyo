@@ -15,7 +15,7 @@ export const ServiceData = async (newData) => {
     return response;
   } catch (error) {
     console.log("Error occurred:", error);
-    throw error; 
+    throw error;
   }
 };
 
