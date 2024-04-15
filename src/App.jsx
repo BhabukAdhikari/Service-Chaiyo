@@ -14,10 +14,10 @@ import Request from "./Dashboard/Pages/Request";
 import Review from "./Dashboard/Pages/Review";
 import Schedule from "./Dashboard/Pages/Schedule";
 import ServiceManagement from "./Dashboard/Pages/ServiceManagement";
+import Main from "./Dashboard/Pages/Main";
 
 const App = () => {
-  // Your logic to determine whether to redirect
-  const shouldRedirect = true; // Change this condition as needed
+  
 
   return (
     <Router>
@@ -36,6 +36,7 @@ const App = () => {
           <Route path="/request" element={<Request />} />
           <Route path="/review" element={<Review />} />
           <Route path="/dashboard" element={<Dashboard/>}/>
+          <Route path="/main" element={<Main/>}/>
         </Routes>
     </div>
 

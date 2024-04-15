@@ -29,8 +29,8 @@ import { Link } from "react-router-dom";
 
 
 const LinkItems = [
-  { name: "Dashboard", icon: FiHome  , link: "/dashboard"},
-  { name: "Service.M", icon: FiTrendingUp  , link: "/service-m"},
+  { name: "Dashboard", icon: FiHome  , link: "/main"},
+  { name: "Service.M", icon: FiTrendingUp  , link: "/serviceM"},
   { name: "Request", icon: FiCompass , link: "/request" },
   { name: "Schedule", icon: FiCompass  , link: "/schedule"},
   { name: "Review", icon: FiStar , link: "/review" },

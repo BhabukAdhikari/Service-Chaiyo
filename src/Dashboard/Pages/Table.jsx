@@ -1,32 +1,41 @@
-import Table from 'react-bootstrap/Table';
+import { th } from "date-fns/locale";
+import Table from "react-bootstrap/Table";
 
 function Tables() {
+  const tableHeading = [
+    { name: "service name" },
+    { name: "description" },
+    { name: "price" },
+    { name: "availability" },
+    { name: "image" }
+  ];
+
   return (
-    <Table responsive>
+    <Table responsive className="mx-auto" style={{ width: '1000px'  , marginTop: "30px"}}>
       <thead>
         <tr>
           <th>#</th>
-          {Array.from({ length: 12 }).map((_, index) => (
-            <th key={index}>Table heading</th>
+          {tableHeading.map((item, index) => (
+            <th key={index}>{item.name}</th>
           ))}
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr className="mb-4">
           <td>1</td>
-          {Array.from({ length: 12 }).map((_, index) => (
+          {Array.from({ length: 5 }).map((_, index) => (
             <td key={index}>Table cell {index}</td>
           ))}
         </tr>
-        <tr>
+        <tr className="mb-4">
           <td>2</td>
-          {Array.from({ length: 12 }).map((_, index) => (
+          {Array.from({ length: 5 }).map((_, index) => (
             <td key={index}>Table cell {index}</td>
           ))}
         </tr>
-        <tr>
+        <tr className="mb-4">
           <td>3</td>
-          {Array.from({ length: 12 }).map((_, index) => (
+          {Array.from({ length: 5 }).map((_, index) => (
             <td key={index}>Table cell {index}</td>
           ))}
         </tr>
